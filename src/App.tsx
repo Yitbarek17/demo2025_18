@@ -97,7 +97,9 @@ const AppContent: React.FC = () => {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/forgot" element={<ForgotPassword onBack={() => navigate('/login')} />} />
         <Route path="/reset/:encoded" element={<ResetPasswordRoute />} />
-        <Route path="*" element={<LoginPage />} />
+        <Route path="*" element={<Homepage onNavigate={function (tab: string): void {
+          throw new Error('Function not implemented.');
+        } } />} />      
       </Routes>
     );
   }
