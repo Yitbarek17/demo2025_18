@@ -33,16 +33,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ projects, metadata }) => {
     };
   }).filter(r => r.projects > 0) || [];
 
-  const subSectorData = metadata?.subSectors.map(subSector => {
-    const subSectorProjects = projects.filter(p => p.subSector === subSector);
-    return {
-      subSector,
-      projects: subSectorProjects.length,
-      employees: subSectorProjects.reduce((sum, p) => sum + p.employeesTotal, 0)
-    };
-  }).filter(s => s.projects > 0) || [];
-
- const subSectorData = metadata?.sectors.map(subSector => {
+  const subSectorData = metadata?.sectors.map(subSector => {
     const subSectorProjects = projects.filter(p => p.sector === subSector);
     return {
       subSector,
@@ -51,6 +42,11 @@ const Analytics: React.FC<AnalyticsProps> = ({ projects, metadata }) => {
     };
   }).filter(s => s.projects > 0) || [];
 
+  const statusData = metadata?.projectStatuses.map(status => ({
+    status,
+    count: projects.filter(p => p.projectStatus === status).length,
+    employees: projects.filter(p => p.projectStatus === status).reduce((sum, p) => sum + p.employeesTotal, 0)
+  })) || [];
 
   // Gender distribution analysis
   const totalMale = projects.reduce((sum, p) => sum + p.employeesMale, 0);
