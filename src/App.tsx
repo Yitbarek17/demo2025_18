@@ -93,16 +93,18 @@ const AppContent: React.FC = () => {
 
   if (!isAuthenticated) {
     return (
-      <Routes>
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/forgot" element={<ForgotPassword onBack={() => navigate('/login')} />} />
-        <Route path="/reset/:encoded" element={<ResetPasswordRoute />} />
-        <Route path="/" element={<Homepage onNavigate={function (tab: string): void {
-          throw new Error('Function not implemented.');
-        } } />} />
-        <Route path="*" element={<LoginPage />}>
-        </Route>
-      </Routes>
+   <Routes>
+  <Route path="/login" element={<LoginPage />} />
+  <Route path="/forgot" element={<ForgotPassword onBack={() => navigate('/login')} />} />
+  <Route path="/reset/:encoded" element={<ResetPasswordRoute />} />
+  <Route path="/" element={
+    <Homepage onNavigate={function (tab: string): void {
+      throw new Error('Function not implemented.');
+    }} />
+  } />
+  <Route path="*" element={<LoginPage />} />
+</Routes>
+
     );
   }
 

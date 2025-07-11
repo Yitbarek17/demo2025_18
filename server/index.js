@@ -25,13 +25,13 @@ app.use('/api/metadata', metadataRoutes);
 app.use('/api/users', userRoutes);
 
 // Serve static files in production
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../dist')));
+// if (process.env.NODE_ENV === 'production') {
+//   app.use(express.static(path.join(__dirname, '../dist')));
   
-  app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../dist/index.html'));
-  });
-}
+//   app.get('*', (req, res) => {
+//     res.sendFile(path.join(__dirname, '../dist/index.html'));
+//   });
+// }
 
 // Initialize database and start server
 const startServer = async () => {
