@@ -95,7 +95,21 @@ const translations: { en: TranslationMap; am: TranslationMap } = {
     'projects.contactInfo': 'Contact Information',
     'projects.teamAdvisors': 'Team & Advisors',
     'projects.employeeStats': 'Employee Statistics',
-    
+    'auth.forgotPasswordLink':'Forget password?',
+    'auth.forgotPasswordTitle':'Reset password',
+    'auth.forgotPasswordSubtitle':'Enter Your Email',
+    'auth.email':'Email',
+    'auth.emailPlaceholder': "user@gmail.com",
+    'auth.backToLogin': "Back to Login",
+    'auth.sendResetLink': "Submit",
+    'auth.resetLinkSent': "Reset Link Sent",
+    'auth.resetPasswordTitle': "Change Your Password",
+    'auth.newPassword': "New Password",
+    'auth.confirmPassword': 'Confirm Password',
+    'auth.confirmPasswordPlaceholder': '*************',
+    'auth.newPasswordPlaceholder': '*************',
+    'auth.resetPassword': 'Reset Password',
+
     // Analytics
     'analytics.overview': 'Overview',
     'analytics.sectors': 'Sector Analysis',
