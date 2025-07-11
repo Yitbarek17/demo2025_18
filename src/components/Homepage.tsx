@@ -251,14 +251,12 @@ const Homepage: React.FC<HomepageProps> = ({ onNavigate }) => {
                   />
                 </>
               ) : (
-                 <a href="login">
-                  <ActionButton
+                <ActionButton
                   onClick={() => onNavigate('login')}
                   icon={LogIn}
                   title="Get Started - Login"
                   variant="primary"
-/>
-                  </a>
+                />
               )}
             </div>
           </div>
