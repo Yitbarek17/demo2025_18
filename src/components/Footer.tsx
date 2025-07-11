@@ -202,7 +202,7 @@ const Footer: React.FC = () => {
             <p className={`text-sm mt-2 md:mt-0 transition-colors ${
               isDark ? 'text-gray-400' : 'text-gray-500'
             }`}>
-              Babi ❤️ from Ethiopia
+              Yitbarek Daniel
             </p>
           </div>
         </div>
