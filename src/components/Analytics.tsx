@@ -33,8 +33,8 @@ const Analytics: React.FC<AnalyticsProps> = ({ projects, metadata }) => {
     };
   }).filter(r => r.projects > 0) || [];
 
-  const subSectorData = metadata?.subSectors.map(subSector => {
-    const subSectorProjects = projects.filter(p => p.subSector === subSector);
+  const subSectorData = metadata?.sectors.map(subSector => {
+    const subSectorProjects = projects.filter(p => p.sector === subSector);
     return {
       subSector,
       projects: subSectorProjects.length,

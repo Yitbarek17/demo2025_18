@@ -167,7 +167,8 @@ const Homepage: React.FC<HomepageProps> = ({ onNavigate }) => {
               {/* Login Button */}
               {!isAuthenticated && (
                 <>
-                  <button
+                  <a
+                    href="/login"
                     onClick={() => onNavigate('login')}
                     className={`inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md transition-all duration-200 hover:scale-105 ${
                       isDark 
@@ -177,17 +178,7 @@ const Homepage: React.FC<HomepageProps> = ({ onNavigate }) => {
                   >
                     <LogIn className="h-4 w-4 mr-2" />
                     Login
-                  </button>
-                  <button
-                    onClick={() => onNavigate('forgot')}
-                    className={`inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md transition-all duration-200 hover:scale-105 ml-2 ${
-                      isDark 
-                        ? 'text-white bg-gray-800 hover:bg-gray-700' 
-                        : 'text-black bg-gray-100 hover:bg-gray-200'
-                    }`}
-                  >
-                    Forgot Password?
-                  </button>
+                  </a>
                 </>
               )}
             </div>
@@ -250,13 +241,17 @@ const Homepage: React.FC<HomepageProps> = ({ onNavigate }) => {
                     variant="secondary"
                   />
                 </>
-              ) : (
-                <ActionButton
+              ) : 
+              (
+                <a href="login">
+                  <ActionButton
                   onClick={() => onNavigate('login')}
                   icon={LogIn}
                   title="Get Started - Login"
                   variant="primary"
-                />
+/>
+                  </a>
+
               )}
             </div>
           </div>
