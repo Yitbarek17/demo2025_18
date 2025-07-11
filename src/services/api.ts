@@ -2,7 +2,7 @@ import axios from 'axios';
 import { Project, Metadata, User } from '../types';
 
 // Use environment variable for API URL, fallback to localhost for development
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://demo2025-18.onrender.com/api';
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://localhost:5173';
 
 const api = axios.create({
   baseURL: API_BASE_URL,
